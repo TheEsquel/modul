@@ -1,30 +1,39 @@
 // angular 1.5
 import * as angular from 'angular'
-import list from './components/companylist'
+import axios from 'axios'
 
-controllerC.$inject = ['']
-function controllerC (){
-    const test = 'Test message from controller C';
-    console.log(test);
-    
+function listController (){
+    this.template = "";
+    var companies = [];
+
+    axios.get("./company.list.json")
+        .then((response) => {                   
+            this.companies = response.data.companies;
+            console.log(this);
+            for(company in companies){
+                console.log(name);
+                
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        })
     }
+function editController(){
+
+}    
 angular
-    .module('app', [])
-    .component('component', {
-        templateUrl: './list.html',
-        // controller: ['controllerC', controllerC()]
+    .module('modulApp', [])
+    .component('list', {
+        template: "<div ng-repeat = 'company in companies'>{{company}}</div>",
+        controller: listController
     })
-    .controller('controllerG', function(){
-        this.test = 'Scope test message'
-        
+    .component('card', {
+        template: "View",
+        controller: function(){
+            console.log('view the company');            
+        }
     })
-
-
-
-// const test = 'test message!';
-// console.log(test);
-
-
-
-
-
+    .component('edit', {
+        controller: editController
+    })

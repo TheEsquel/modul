@@ -1,0 +1,29 @@
+{
+"companies":
+    [
+        {
+            "id": 0,
+            "name" : "Yamaha",
+            "prn" : "198453433330",
+            "type" : "ОАО",
+            "date" : "12.10.1887",
+            "isactive" : true
+        },
+        {
+            "id": 1,
+            "name" : "Yamaha",
+            "prn" : "198453433330",
+            "type" : "ОАО",
+            "date" : "12.10.1887",
+            "isactive" : true
+        },
+        {
+            "id": 2,
+            "name" : "Yamaha",
+            "prn" : "198453433330",
+            "type" : "ОАО",
+            "date" : "12.10.1887",
+            "isactive" : true
+        }
+    ]  
+}
