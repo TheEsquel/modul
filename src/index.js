@@ -1,39 +1,25 @@
-// angular 1.5
-import * as angular from 'angular'
-import axios from 'axios'
+import angular from 'angular'
+import listController from './components/companylist';
+import axios from 'axios';
 
-function listController (){
-    this.template = "";
-    var companies = [];
-
-    axios.get("./company.list.json")
-        .then((response) => {                   
-            this.companies = response.data.companies;
-            console.log(this);
-            for(company in companies){
-                console.log(name);
-                
-            }
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-    }
-function editController(){
-
-}    
-angular
-    .module('modulApp', [])
+angular.module('app', []).controller('listController', listController
+    // [function($scope){
+    //     var self = this;
+    //     self.message = "No scope is needed";
+    //     self.companies = '.'
+    //     axios.get("./company.list.json")
+    //         .then((response) => {                   
+    //             self.companies = response.data.companies;
+    //             console.log(self.companies);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         })
+    //         .then(function(){})
+    //     console.log(self.companies);            
+    // }]
+    )
     .component('list', {
-        template: "<div ng-repeat = 'company in companies'>{{company}}</div>",
-        controller: listController
-    })
-    .component('card', {
-        template: "View",
-        controller: function(){
-            console.log('view the company');            
-        }
-    })
-    .component('edit', {
-        controller: editController
+        template: "",
+        controller: function(){}
     })

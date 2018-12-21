@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app = 'modulApp'>
+<html ng-app = 'app'>
 <head lang="en">
   <meta charset="UTF-8">
   <title>Angular with Webpack</title>
@@ -9,9 +9,16 @@
 </head>
 <body >
   <div class='container flex'>
-      <list></list>
+      <list >
+      </list>
       <card></card>
       <edit></edit>
+      <div ng-controller = "listController as ctr">
+          <div ng-bind = 'ctr.listJSON'></div>
+          <div>
+            {{ ctr.list}}
+          </div>
+      </div>
   </div>
 
 </body>
