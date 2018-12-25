@@ -1,25 +1,35 @@
 import angular from 'angular'
-import listController from './components/companylist';
-import axios from 'axios';
+import listController from './components/listController'
+import showController from './components/showController'
+import service from './components/service'
 
-angular.module('app', []).controller('listController', listController
-    // [function($scope){
-    //     var self = this;
-    //     self.message = "No scope is needed";
-    //     self.companies = '.'
-    //     axios.get("./company.list.json")
-    //         .then((response) => {                   
-    //             self.companies = response.data.companies;
-    //             console.log(self.companies);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         })
-    //         .then(function(){})
-    //     console.log(self.companies);            
-    // }]
-    )
+angular.module('app', [])  
     .component('list', {
-        template: "",
-        controller: function(){}
+        controller: ["service", listController],
+        controllerAs: 'list',
+        template: 
+        `
+        <div>
+            <h3> Company's  list: </h3>
+            <div ng-repeat='item in list.list track by $index'>
+            <a href="#" > {{ item.name }} id: {{ item.id }} </a>
+            </div>
+        </div>
+        `
     })
+    .component('show', {
+        controller: [showController],
+        controllerAs : 'show',
+        template: 
+        `
+        <div> A company card </div>
+        `
+    })
+    .component('edit',{
+        
+    })
+    .service('service' ,['$q', service])
+
+
+
+

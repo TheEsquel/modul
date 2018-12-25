@@ -1,4 +1,5 @@
 module.exports = {
+
   watch: true,
   context: __dirname + '/src',
   entry: './index.js',
