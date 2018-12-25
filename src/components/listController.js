@@ -6,13 +6,15 @@ export default class listController  {
         this.service = service;
     }
     $onInit(){      
-        this.service.get()
+        this.service.getList()
             .then(data => {
                 this.list = data
                 console.log(data);
             })
     }
     $onChange(){
+        console.log('on change');
+        
             }
 }
 // listController.$inject['service']

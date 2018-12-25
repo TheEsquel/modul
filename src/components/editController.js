@@ -1,12 +1,12 @@
-// import { Component } from 'angular'
+import axios from 'axios'
 
-// Component({
-//   selector: 'my-app',
-//   template: `
-//     <div> </div>
-//   `,
-//   controller: function () {
-//     console.log("a new test message");
-    
-//   }
-// })
+export default class editController{
+  constructor(service){
+    this.service = service;
+}
+    $onInit(){
+    }
+    $onChange(item){
+      console.log(item)
+    }
+}

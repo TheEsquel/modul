@@ -1,16 +1,16 @@
 import axios from 'axios'
 
 export default class showController{
-  constructor(id){
-    this.id = "id";
+  constructor(service){
 
+    this.service = service;
+    this.isShown = false
 }
     $onInit(){
-      console.log(this.id);
       
     }
-    $onChange(){
-      
+    $onChange(item){
+      console.log(item)
     }
 }
 showController.$inject = ['id']

@@ -5,7 +5,7 @@
             "id": 100,
             "name" : "Yamaha",
             "prn" : "198453433330",
-            "type" : "ОАО",
+            "type" : "ИП",
             "date" : "12.10.1887",
             "isactive" : true
         },
@@ -23,7 +23,7 @@
             "prn" : "198456753433",
             "type" : "OОО",
             "date" : "13.07.1890",
-            "isactive" : true
+            "isactive" : false
         }
     ]  
 }
