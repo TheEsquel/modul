@@ -1,0 +1,20 @@
+<div ng-show = 'edit.service.editIsShown' class='inner-div'>
+        <h3> Редактировать: </h3>
+        <form>
+           <label>Название : </label> <input type='text' ng-model = 'edit.service.newCompany.name'></br>
+           <label>ОГРН : </label> <input type='text'  ng-model = 'edit.service.newCompany.prn'> </br>
+           <label>Тип компании: </label>
+              <select  ng-model = 'edit.service.newCompany.type' >
+                <option value='ООО'> ООО
+                <option value='ЗАО'> ЗАО
+                <option value='ИП'> ИП
+              </select>  </br>
+          <label>Дата: </label>  
+          <datepicker  date-format="dd.mm.yyyy">
+            <input  ng-model = 'edit.service.newCompany.date' type="text"/>
+          </datepicker>
+  </br>
+          <label>Активна: </label><input type='checkbox' > </br>
+          <button type="button" class="btn btn-primary" ng-click ='edit.service.saveCompany()'>Сохранить</button>
+        </form>
+</div> 

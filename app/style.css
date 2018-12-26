@@ -27,7 +27,7 @@ list {
 show, edit {
   margin: 20px 20px; }
 
-show div, edit div {
+.inner-div {
   background-color: white;
   border-radius: 5px;
   padding: 20px; }
@@ -37,5 +37,9 @@ show div, edit div {
 
 .btn {
   margin-top: 10px; }
+
+datepicker {
+  float: right;
+  width: 162px; }
 
 /*# sourceMappingURL=style.css.map */

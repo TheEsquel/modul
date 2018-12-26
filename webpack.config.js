@@ -12,12 +12,16 @@ module.exports = {
       {
         test: /\.js/,
         exclude: /node_modules/,
-        use: [{
+        use: {
           loader: 'babel-loader'
-        },
-
-      ]
-      }
+        }
+      },
+      {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader'
+        }
+      }           
     ]
   }
 };

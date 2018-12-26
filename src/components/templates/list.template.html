@@ -1,0 +1,8 @@
+<div>
+    <h3> Список компаний: </h3>
+    <div ng-repeat='item in listComponent.list track by $index'>
+      <a href="#" ng-click = 'listComponent.service.showCompany(item)'>
+           {{ item.name }} id: {{ item.id }} 
+      </a>
+    </div>
+  </div>
