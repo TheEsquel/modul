@@ -1,10 +1,12 @@
 import  axios from 'axios'
+import { error } from 'util';
 export default class Service {
     constructor($q){
         this.$q = $q;
         this.company = {}
-        this.cardIsShown = true
-        this.editIsShown = true
+        this.newCompany = {}
+        this.cardIsShown = false
+        this.editIsShown = false
     }
     getList(){
         return  this.$q.when(axios.get("./company.list.json"))
@@ -21,9 +23,24 @@ export default class Service {
         console.log(this.company);      
     }
     editCompany(item){
-        console.log('edit company is  ' + this.editIsShown);
         this.editIsShown = true
-        console.log('edit company is  ' + this.editIsShown);
+
+    }
+    saveCompany(){
+        console.log(this.company.id);        
+        this.company.name = this.newCompany.name
+        console.log(this.newCompany.name)
+        axios.post("./company.list.json", {
+            'companies/[this.company.id]/name' : this.newCompany.name
+        })
+            .then(response => {
+                console.log(response);               
+            })
+            .catch(error => {
+                console.log(error);
+                
+            })
+
     }
 }
 Service.$inject = ['$q']

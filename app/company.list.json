@@ -2,7 +2,7 @@
 "companies":
     [
         {
-            "id": 100,
+            "id": 0,
             "name" : "Yamaha",
             "prn" : "198453433330",
             "type" : "ИП",
@@ -10,7 +10,7 @@
             "isactive" : true
         },
         {
-            "id": 101,
+            "id": 1,
             "name" : "Fender",
             "prn" : "198445113370",
             "type" : "ЗАО",
@@ -18,11 +18,19 @@
             "isactive" : true
         },
         {
-            "id": 102,
+            "id": 2,
             "name" : "Gibson",
             "prn" : "198456753433",
             "type" : "OОО",
             "date" : "13.07.1890",
+            "isactive" : false
+        },
+        {
+            "id": 3,
+            "name" : "Sennheiser",
+            "prn" : "19845676543",
+            "type" : "ИП",
+            "date" : "01.06.1945",
             "isactive" : false
         }
     ]  
